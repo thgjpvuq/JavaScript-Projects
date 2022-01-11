@@ -28,6 +28,35 @@
 //     Jacob.vehicle_Year;
 // }
 
+// function concateFunction()    {
+//     document.getElementById("concate").innerHTML = concatenate();
+//     function concatenate()    {
+//         var start_point = 'string \+ ';
+//         function add() {start_point += 'string 2';}
+//         add();
+//         return start_point;
+//     }
+// }
+
+function Prog_Function()    {
+    var Lang, Program;
+    Lang = document.getElementById("Lang").value;
+    Program = (Lang < 1) ? "You are not a programmer":"You are a programmer";
+    document.getElementById("Program").innerHTML = Program;
+}
+
+function cat(Furlength, Furcolor)  {
+    this.cat_Furlength = Furlength;
+    this.cat_Furcolor = Furcolor;
+}
+var Smokey = new cat("short", "gray");
+var Snoopy = new cat("short", "black");
+var Quincy = new cat("long", "black");
+function myFunction()   {
+    document.getElementById("New_and_This").innerHTML = "Snoopy is a " + 
+    Snoopy.cat_Furcolor + "-colored " + "cat" + " with " + Snoopy.cat_Furlength + " fur";
+}
+
 function concateFunction()    {
     document.getElementById("concate").innerHTML = concatenate();
     function concatenate()    {
