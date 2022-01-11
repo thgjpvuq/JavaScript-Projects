@@ -10,8 +10,14 @@
 // xyfunction();
 // xfunction();
 
-function get_Date() {
-    if (new Date().getHours() < 18)  {
-        document.getElementById("greeting").innerHTML = "How are you today?";
+// function get_Date() {
+//     if (new Date().getHours() < 18)  {
+//         document.getElementById("greeting").innerHTML = "How are you today?";
+//     }
+// }
+
+function ifgreater()    {
+    if (5 > 3)  {
+        document.write("5 > 3");
     }
 }
