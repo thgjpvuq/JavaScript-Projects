@@ -5,20 +5,15 @@
         <script src="JavaScript/JavaScript_2.js" defer></script>
     </head>
     <body>
-        
-        <!-- <form name="Contact" onsubmit="return validateForm()" method="post">
-            <h1>Contact</h1>
-            <label id="name">Name:</label><br>
-            <input type="text"><br>
-            <label>E-mail:</label><br>
-            <input type="text"><br>
-            <label>Phone:</label><br>
-            <input type="text"><br>
-            <input type="submit">
-        </form> -->
 
         <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-            Name: <input type="text" name="fname">
+            <header><h1>Contact</h1></header>
+            <p>Name:</p>
+            <input type="text" name="fname">
+            <p>E-mail:</p>
+            <input type="text" name="email">
+            <p>Phone Number:</p>
+            <input type="text" name="phone"><br>
             <input type="submit" value="Submit">
         </form>
 
