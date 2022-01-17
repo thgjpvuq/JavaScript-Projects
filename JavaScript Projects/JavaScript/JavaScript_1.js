@@ -37,3 +37,12 @@ var atx= a.getContext("2d");
 atx.moveTo(0,0);
 atx.lineTo(500, 250);
 atx.stroke();
+
+var a = document.getElementById("canvas2");
+var atx= a.getContext("2d");
+var grd = atx.createLinearGradient(0, 0, 250, 0);
+grd.addColorStop(0, "black");
+grd.addColorStop(1, "white");
+
+atx.fillStyle = grd;
+atx.fillRect(0, 0, 500, 250);
