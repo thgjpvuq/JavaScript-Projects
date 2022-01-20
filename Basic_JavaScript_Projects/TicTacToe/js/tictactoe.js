@@ -26,7 +26,7 @@ function placeXorO(squareNumber)    {
         // squareNumber and activePlayer are concatenated and added to the end of the array
         selectedSquares.push(squareNumber + activePlayer);
         // Calling a function to check if win conditions have been met
-        checkWinConditions;
+        checkWinConditions();
         // To change the active player
         if (activePlayer === 'X')   {
             //If activePlayer is 'X' change it to 'O'
@@ -94,7 +94,7 @@ function checkWinConditions()   {
     // X 0, 4, 8 condition
     else if     (arrayIncludes('0X', '4X', '8X'))    { drawWinLine(100, 100, 520, 520) }
     // O 0, 1, 2 condition
-    if          (arrayIncludes('0O', '1O', '2O'))    { drawWinLine(50, 100, 558, 100) }
+    else if     (arrayIncludes('0O', '1O', '2O'))    { drawWinLine(50, 100, 558, 100) }
     // O 3, 4, 5 condition
     else if     (arrayIncludes('3O', '4O', '5O'))    { drawWinLine(50, 304, 558, 304) }
     // O 6, 7, 8 condition
@@ -170,7 +170,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
 
     // This function interacts with the canvas
     function animateLineDrawing()   {
-        const animationLoop = requestAnimationFrame(animateLineDrawing);
+        const animationLoop = requestAnimationFrame(animateLineDrawing());
         // This method clears content from the last loop iteration
         c.clearRect(0, 0, 608, 608)
         // Starts a new path
@@ -180,7 +180,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
         // move to endpoint of a line
         c.moveTo(x, y)
         c.lineWidth = 10;
-        c.strokeStyle = rgba(70, 255, 33, .8);
+        c.strokeStyle = black;
         c.stroke();
         // condition to check if endpoint has been reached
         if (x1 <= x2 && y1 <= y2)   {
