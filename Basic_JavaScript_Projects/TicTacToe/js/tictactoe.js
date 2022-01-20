@@ -170,7 +170,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
 
     // This function interacts with the canvas
     function animateLineDrawing()   {
-        const animationLoop = requestAnimationFrame(animateLineDrawing());
+        const animationLoop = requestAnimationFrame(animateLineDrawing);
         // This method clears content from the last loop iteration
         c.clearRect(0, 0, 608, 608)
         // Starts a new path
@@ -180,7 +180,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
         // move to endpoint of a line
         c.moveTo(x, y)
         c.lineWidth = 10;
-        c.strokeStyle = black;
+        c.strokeStyle = 'rgba(70, 255, 33, .8)';
         c.stroke();
         // condition to check if endpoint has been reached
         if (x1 <= x2 && y1 <= y2)   {
