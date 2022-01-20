@@ -195,15 +195,6 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
-    // Added this for debugging purposes after drawing line didn't work
-    drawWinLine();
-
-    // This clears the canvas after a win line is drawn
-    function clear()    {
-        const animationLoop = requestAnimationFrame(clear);
-        c.clearRect(0, 0, 608, 608);
-        cancelAnimationFrame(animationLoop);
-    }
 
 
     //calling the disable click function
@@ -214,6 +205,13 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
     animateLineDrawing();
     // wait 1 second, clear canvas, reset game, and allow clicking
     setTimeout(function()   { clear(); resetGame(); }, 1000);
+
+    // This clears the canvas after a win line is drawn
+    function clear()    {
+        const animationLoop = requestAnimationFrame(clear);
+        c.clearRect(0, 0, 608, 608);
+        cancelAnimationFrame(animationLoop);
+    }
 }
 
 
