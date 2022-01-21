@@ -178,7 +178,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2)    {
         // moves to the starting point of a line
         c.moveTo(x1, y1)
         // move to endpoint of a line
-        c.moveTo(x, y)
+        c.lineTo(x, y)
         c.lineWidth = 10;
         c.strokeStyle = 'rgba(70, 255, 33, .8)';
         c.stroke();
