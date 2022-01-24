@@ -12,7 +12,7 @@
         <h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
         <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
         <form id="frmMenu">
-            <div class="menu left">
+            <div class="menu-left">
                 <h3>Size:</h3>
                 <input class="size" type="radio" name="Size"
                     value="Personal Pizza">Personal Pizza<br>
@@ -26,7 +26,19 @@
                     value="Family Pizza">Family Pizza<br>
             </div>
 
-            <div class="menu right">
+            <div class="menu-center">
+                <h3>Vegetables:</h3>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Green Peppers">Green Peppers<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Tomatoes">Tomatoes<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Banana Peppers">Banana Peppers<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Red Onion">Red Onion<br>
+            </div>
+
+            <div class="menu-right">
                 <h3>Meats:</h3>
                 <input class="toppings" type="checkbox" name="Topping"
                     value="Pepperoni">Pepperoni<br>
