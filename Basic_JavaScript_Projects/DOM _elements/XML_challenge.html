@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="XML"></p>
+<script>
+    var XML_Parser, XML_Document;
+
+    // Creates a text string
+    var Cat = "<cat>" + "<name>Leo</name>"
+    + "<age>5</age>" + "<weight>15 lbs</weight>" 
+    + "</cat>";
+
+    // creates an XML DOM parser
+    XML_Parser = new DOMParser();
+
+    // creates a new XML DOM object using the text string
+    XML_Document = XML_Parser.parseFromString(Cat,"text/xml");
+
+    document.getElementById("XML").innerHTML = 
+    XML_Document.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+</script>
+</body>
+</html>
